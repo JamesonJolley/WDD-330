@@ -6,13 +6,17 @@ const links = [
 ]
 
 
+class main_contaner{
+    constructor(){
+       this.contaner = document.createElement("div") 
+       this.contaner.className = "main"
+       document.body.appendChild(this.contaner)
+    }
+}
 //oragin point of the 
 function main(){
-Main = document.createElement("div")
-Main.id = "main"
-document.body.appendChild(main)
+    Main = main_contaner()
 }
 
 //makes new elements and apends them to the dom
-
 main()
