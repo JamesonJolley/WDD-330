@@ -9,7 +9,7 @@ const links = [
 //oragin point of the 
 function main(){
 Main = document.createElement("div")
-
+Main.id = "main"
 document.body.appendChild(main)
 }
 
