@@ -8,7 +8,7 @@ const links = [
 var elements = [
     {
         tag:"div",
-        Destination:"main",
+        Destination:"body",
         content:''
     },
 ]
