@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<title>Story Writer</title>
+<script src="js/main.js" defer>
     
+</script>
+<style>
+    textarea{
+        width: 800px;
+        height: 250px;
+        background-color: lightcyan;
+        border-radius: 4px;
+        box-shadow: 7px 7px 14px 2px rgba(0,0,0,0.58);
+    }
+</style>
+</head>
+
+<body>
+    <h1>Story Editor</h1>
+    Story Name:<input id=name_input></input>
+    <section>
+        <button onclick="loadStory()">Find</button>
+        <button onclick="saveStory()">Save</button>
+        <button onclick="displayStory()">Display</button>
+    </section>
+    <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+    <div id =story_display></div>
 </body>
 </html>
