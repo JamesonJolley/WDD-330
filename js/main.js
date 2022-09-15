@@ -5,27 +5,14 @@ const links = [
     }
 ]
 
-var elements = [
-    {
-        tag:"div",
-        Destination:"body",
-        content:''
-    },
-]
+
 //oragin point of the 
 function main(){
-create_elements(elements)    
+Main = document.createElement("div")
+
+document.body.appendChild(main)
 }
 
 //makes new elements and apends them to the dom
-function create_elements(elements){
-    elements.forEach(element => {
-        //this will update all the the elaments inside of the elements array
-        curent_e  = document.createElement(element.tag)
-        element_destination = document.querySelector(element.Destination)
-        curent_e.innerHTML = element.content
-        element_destination.appendChild(curent_e)
-    });
-}
 
 main()
