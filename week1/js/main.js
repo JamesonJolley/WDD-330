@@ -11,7 +11,7 @@ function saveStory(){
     }
 function displayStory(){
     var storyHTML = document.getElementById("story_editor").value
-    console.log(storyHTML)
+    //console.log(storyHTML)
     document.querySelector('#story_display').innerHTML= storyHTML
     }
 
