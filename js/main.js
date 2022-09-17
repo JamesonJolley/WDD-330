@@ -1,8 +1,7 @@
 
 class Component{
-    constructor(Destination){
-        this.Destination = Destination
-        this.add = function(Destination = this.Destination){
+    constructor(){
+        this.add = function(Destination){
             Destination.appendChild(this.element);
         }
     }
@@ -18,27 +17,27 @@ class main_div extends Component{
 class header extends Component{
     constructor(text){
         super(Component)
-        this.element = document.createElement("h1")
+        this.element = document.createElement("header")
         this.element.innerHTML = text
     }
 }
 class link extends Component{
-    constructor(Destination,href,name){
-        super(new Component(Destination))
+    constructor(href,name){
+        super(Component)
         this.element = document.createElement("li")
-        this.className = "link"
+        this.element.className = "link"
         this.element.innerHTML= `<a href=${href}>${name}</a>`
     }
 }
 
 class nav extends Component{
-    constructor(Destination){
-        super(new Component(Destination))
+    constructor(){
+        super(Component)
         this.element = document.createElement("ul");
         this.element.className = "nav";
         this.populate = function(links){
             links.forEach(element => {
-                var newl = new link(this.element,element.url,element.label)
+                var newl = new link(element.url,element.label)
                 this.element.appendChild(newl.element)
             });
         }

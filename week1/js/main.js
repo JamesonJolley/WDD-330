@@ -1,4 +1,4 @@
-//i whaneted to do the js in a its own file
+
 function loadStory(){
     var storyName = document.querySelector("#name_input").value
     var storyHTML = localStorage.getItem(storyName)
