@@ -1,10 +1,3 @@
-let b = 2;
-{b = 4;
-	console.log(b);
-}
-
-console.log(b);
-// this did't wor as expeted idk why
 
 //
 //Naming Constants & Variables
@@ -20,6 +13,9 @@ console.log(b);
 //	address_line1
 //
 
+// just fallow the same convention as you allways have in all your  python 3 stuff
+// 
+
 // strings
 //
 // you can construrct strings in difret ways
@@ -31,15 +27,15 @@ console.log(Astring);
 console.log($string);
 
 
-// you can't access properties using dictionary like notation instead of. Notation
+// properties using dictionary like notation instead of . Notation
 
-console.log(Astring["lenght"]);
+console.log(Astring["length"]);
 console.log(Astring.length);
 
+// why would you use one over the other? just seems redundant to me.  
 
+//did know you could do this :) neat.
 let new_num = 0xAFF
 console.log(new_num);
-
-//Quiz Ninja Project
 
 
