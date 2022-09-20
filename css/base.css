@@ -50,3 +50,7 @@ body{
     text-decoration: none;
     color: #000000;
 }
+.main{
+    max-width: 960px;
+    margin: 0 auto;
+}
