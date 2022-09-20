@@ -21,17 +21,26 @@ class header extends Component{
         this.element.innerHTML = text
     }
 }
+class A extends Component{
+    constructor(href,text){
+        this.element = document.createElement('a')
+        this.element.href = href
+        this.element.innerHTML= text
+    }
+}
 class link extends Component{
     constructor(href,name){
         super(Component)
         this.element = document.createElement("li")
         this.element.className = "link"
-        this.element.innerHTML= `<a href=${href}>${name}</a>`
+        this.element.innerHTML= `${name}`
+        this.element.addEventListener("click",()=>{
+            document.location.href = href
+        })
     }
 }
-
 class nav extends Component{
-    constructor(){
+    constructor(links){
         super(Component)
         this.element = document.createElement("ul");
         this.element.className = "nav";
@@ -41,15 +50,24 @@ class nav extends Component{
                 this.element.appendChild(newl.element)
             });
         }
+        this.populate(links)
     }
 }
 
 function main(){
     const links = [
     {
+        label:"Home",
+        url:"../index.html"
+    },
+    {
         label: "Week1 notes",
         url: "week1/index.html"
-    }
+    },
+	{
+		label:"week2 notes",
+		url:"week2/index.html"
+	}
 ]
     //makes a content div
     Main = new main_div()
@@ -59,8 +77,7 @@ function main(){
     head.add(Main.element)
 
     //adds  the nav
-    nav_bar = new nav()
-    nav_bar.populate(links)
+    nav_bar = new nav(links)
     nav_bar.add(Main.element)
     
 }
