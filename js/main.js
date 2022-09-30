@@ -67,7 +67,15 @@ function main(){
 	{
 		label:"week2 notes",
 		url:"week2/index.html"
-	}
+	},
+    {
+        label:"week3 notes",
+        url:"week3/index.html"
+    },
+    {
+        label:"week3 notes/events.html",
+        url:"week3/events.html"
+    }
 ]
     //makes a content div
     Main = new main_div()
