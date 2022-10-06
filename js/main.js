@@ -75,11 +75,14 @@ function main(){
     {
         label:"week3 notes/events.html",
         url:"week3/events.html"
-    }
+    },
+    {
+        label:"week4 Quiz Ninja!",
+        url:"week4/index.html"
+    },
 ]
     //makes a content div
     Main = new main_div()
-    
     // addds a header
     head = new header("Jameson M Jolley's Portfolio")
     head.add(Main.element)
