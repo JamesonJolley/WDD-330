@@ -57,10 +57,6 @@ class nav extends Component{
 function main(){
     const links = [
     {
-        label:"Home",
-        url:"../index.html"
-    },
-    {
         label: "Week1 notes",
         url: "week1/index.html"
     },
