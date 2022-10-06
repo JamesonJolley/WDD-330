@@ -74,7 +74,7 @@ function main(){
     },
     {
         label:"week3 notes/events.html",
-        url:"week3/events.html"
+        url:"week3/events"
     },
     {
         label:"week4 Quiz Ninja!",
