@@ -19,46 +19,47 @@ function factorsOf(n) {
     return factors.sort((a,b) => a - b);
 }
 
-test('factors of 12', () => {
-    expect(factorsOf(12)).toEqual([1,2,3,4,6,12]);
-});
-
-
-test('2 is prime', () => {
-    expect(isPrime(2)).toBe(true);
-});
-
-test('10 is not prime', () => {
-    expect(isPrime(10)).not.toBe(true);
-});
-
-function isPrime(n) {
-try{
-    return factorsOf(n).length === 2;
-} catch(error) {
-    return false;
-}
-}
-it('should throw an exception for non-numerical data', () => {
-    expect(factorsOf('twelve').toThrow()
-});
-
-it('should throw an exception for negative numbers', () => {
-    expect(() => factorsOf(-2)).toThrow()
-});
-
-it('should throw an exception for non-integer numbers', () => {
-    expect(() => factorsOf(3.14159)).toThrow()
-});
-
-test('non-numerical data returns not prime', () => {
-    expect(isPrime('two')).toBe(false)
-});
-
-test('non-integer numbers return not prime', () => {
-    expect(isPrime(1.2)).toBe(false)
-});
-
-test('negative numbers return not prime', () => {
-    expect(isPrime(-1)).toBe(false)
-});
+//test('factors of 12', () => {
+//    expect(factorsOf(12)).toEqual([1,2,3,4,6,12]);
+//});
+//
+//
+//test('2 is prime', () => {
+//    expect(isPrime(2)).toBe(true);
+//});
+//
+//test('10 is not prime', () => {
+//    expect(isPrime(10)).not.toBe(true);
+//});
+//
+//function isPrime(n) {
+//try{
+//    return factorsOf(n).length === 2;
+//} catch(error) {
+//    return false;
+//}
+//}
+//it('should throw an exception for non-numerical data', () => {
+//    expect(factorsOf('twelve').toThrow()
+//});
+//
+//it('should throw an exception for negative numbers', () => {
+//    expect(() => factorsOf(-2)).toThrow()
+//});
+//
+//it('should throw an exception for non-integer numbers', () => {
+//    expect(() => factorsOf(3.14159)).toThrow()
+//});
+//
+//test('non-numerical data returns not prime', () => {
+//    expect(isPrime('two')).toBe(false)
+//});
+//
+//test('non-integer numbers return not prime', () => {
+//    expect(isPrime(1.2)).toBe(false)
+//});
+//
+//test('negative numbers return not prime', () => {
+//    expect(isPrime(-1)).toBe(false)
+//});
+//
