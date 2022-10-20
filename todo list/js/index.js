@@ -1,0 +1,8 @@
+
+
+
+main =(...callback) => {
+	
+}
+main()
+

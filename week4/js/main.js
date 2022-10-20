@@ -59,6 +59,7 @@ buttons(array){
 };
 const game = {
     start(quiz){
+        console.log('start() invoked');
         view.hide(view.start);
         this.questions = [...quiz];
         this.score = 0;
@@ -100,6 +101,7 @@ const game = {
         this.ask();
     },
     gameOver(){
+        console.log('gameOver() invoked');
         view.teardown();
         view.show(view.start);
         view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
@@ -108,3 +110,8 @@ const game = {
 
 view.start.addEventListener('click', () => game.start(quiz), false);
 view.response.addEventListener('click', (event) => game.check(event), false);
+
+
+
+
+
