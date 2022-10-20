@@ -76,6 +76,10 @@ function main(){
         label:"week4 Quiz Ninja!",
         url:"week4/index.html"
     },
+    {
+        label:"week5",
+        url:"week5/index.html"
+    },
 ]
     //makes a content div
     Main = new main_div()
