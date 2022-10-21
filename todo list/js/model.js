@@ -20,16 +20,16 @@ export default class to_do_model{
             i++
         })
     }
-    scync_data(){
+    sync_data(){
         this.populate_to_local()
         this.populate_todo_from_local()
     }
     get_data(){
-        scyncdata()
+        sync_data()
         return to_do_list
     }
     add_todo(todo){
         to_do_list.push(todo)
-        scyncdata()
+        sync_data()
     }
 }
