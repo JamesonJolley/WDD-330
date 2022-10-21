@@ -69,7 +69,7 @@ function main(){
         url:"week3/index.html"
     },
     {
-        label:"week3 notes/events.html",
+        label:"week3 notes/events",
         url:"week3/events"
     },
     {

@@ -1,4 +1,4 @@
-class to_do_view{
+export default class to_do_view{
     constructor(){
     }
     render_list(list,listelement){
