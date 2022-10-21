@@ -1,23 +1,35 @@
-to_do_list={
-    'example':'contents'
-}
+var to_do_list=[
+    'example',
+]
 
-
-class to_do_model{
+export default class to_do_model{
     constructor() {
         // We need a constructor...but in this case it isn't doing much
     }
-    save_to_local(){
+    populate_to_local(){
+        var i = 0
         to_do_list.forEach(element => {
-            localStorage.setItem(element[0], element[1]);
+            localStorage.setItem(i, element[i]);
+            i++
         });
     }
     populate_todo_from_local(){
+        var i = 0
         localStorage.forEach((element) => {
-            to_do_list[element.key] = element
+            to_do_list[i] = element
+            i++
         })
     }
+    scync_data(){
+        this.populate_to_local()
+        this.populate_todo_from_local()
+    }
     get_data(){
+        scyncdata()
         return to_do_list
+    }
+    add_todo(todo){
+        to_do_list.push(todo)
+        scyncdata()
     }
 }
