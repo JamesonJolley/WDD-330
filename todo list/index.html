@@ -5,33 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="module" src="js/index.js" ></script>
+    <script type="module" src="js/index.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/norm.css">
 </head>
 <body>
-	<section>	
-		<header>
-		<h1>to do list</h1>
-		</header>	
+	<section id="main">
+		<header id="mainheader">
+		<h1>To Do List</h1>
+		</header>
         <main>
-            <ul id="todos">
-                <li class="a_todo">
-                    <section class="todo_banner">
-                        <header class="todo_name">
-                            <h1 class="todo_title">name of the todo</h1>
-                        </header>
-                        <main>
-                            <p class="discription"></p>
-                            <button class="todo_done">mark done</button>
-                            <button class="todo_delete">delete</button>
-                        </main>
-                    </section>
-                </li>
-            </ul>
+            <ul id="todos"></ul>
             <footer class="list_footer">
-            <input id='input_todo' type="text"> 
-            <button id="todo_delete">add</button>
+                    <label for="">Add task:</label>
+                    <input id='input_todo' type="text"> 
+                    <button id="todo_add">add</button>
+                    <label for="">display</label>
+                    <select name="display" id="display">
+                        <option value="all">all</option>
+                        <option value="completed">completed</option>
+                        <option value="not completed">not completed</option>
+                    </select>
+                    <label id='counter' for="">number of tasks:0</label>
             </footer>
         </main>
-</section>
+    </section>
 </body>
 </html>
