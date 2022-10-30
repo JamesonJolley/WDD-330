@@ -1,3 +1,12 @@
+const url = 'http://spbooks.github.io/questions.json';
+const quiz =[]
+fetch(url)
+.then(res => res.json())
+.then(quiz => {
+    view.start.addEventListener('click', () => game.start(quiz.questions), false);
+    view.response.addEventListener('click', (event) => game.check(event), false);
+});
+
 
 function random(a,b=1) {
     // if only 1 argument is provided, we need to swap the values of a and b
@@ -14,14 +23,14 @@ function shuffle(array) {
     }
 }
 
-const quiz = [
-    { name: "Superman",realName: "Clark Kent" },
-    { name: "Wonder Woman",realName: "Diana Prince" },
-    { name: "Batman",realName: "Bruce Wayne" },
-    { name: "The Hulk",realName: "Bruce Banner" },
-    { name: "Spider-man",realName: "Peter Parker" },
-    { name: "Cyclops",realName: "Scott Summers" }
-];
+//const quiz = [
+//    { name: "Superman",realName: "Clark Kent" },
+//    { name: "Wonder Woman",realName: "Diana Prince" },
+//    { name: "Batman",realName: "Bruce Wayne" },
+//    { name: "The Hulk",realName: "Bruce Banner" },
+//    { name: "Spider-man",realName: "Peter Parker" },
+//    { name: "Cyclops",realName: "Scott Summers" }
+//];
 const view = {
     score: document.querySelector('#score strong'),
     question: document.getElementById('question'),
@@ -113,7 +122,34 @@ const game = {
 view.start.addEventListener('click', () => game.start(quiz), false);
 view.response.addEventListener('click', (event) => game.check(event), false);
 
+//todo part
+const form = document.forms['todo'];
 
+form.addEventListener('submit', addTask, false);
+
+function addTask(event) {
+    event.preventDefault();
+    const task = new FormData(form);
+    const url = `http://echo.jsontest.com/id/1/title/${form.task.value}`;
+    const headers = new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    });
+    const request = new Request(url,
+    {
+        method: 'POST',
+        mode: 'cors',
+        header: headers,
+        body: JSON.stringify(task)
+    }
+    )
+
+    fetch(request)
+    .then( response => response.json() )
+    .then( data => console.log(`${data.title} saved with an id of ${data.id}`) )
+    .catch( error => console.log('There was an error:', error))
+
+}
 
 
 
