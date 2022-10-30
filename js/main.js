@@ -73,7 +73,7 @@ function main(){
         url:"week3/events"
     },
     {
-        label:"week4 Quiz Ninja!",
+        label:"Quiz Ninja!",
         url:"week4/index.html"
     },
     {

@@ -1,16 +1,18 @@
-function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+
+function random(a,b=1) {
+    // if only 1 argument is provided, we need to swap the values of a and b
+    if (b === 1) {
+        [a,b] = [b,a];
     }
-    return array;
-  }
+    return Math.floor((b-a+1) * Math.random()) + a;
+}
+
+function shuffle(array) {
+    for (let i = array.length; i; i--) {
+        let j = random(i)-1;
+        [array[i - 1], array[j]] = [array[j], array[i - 1]];
+    }
+}
 
 const quiz = [
     { name: "Superman",realName: "Clark Kent" },
