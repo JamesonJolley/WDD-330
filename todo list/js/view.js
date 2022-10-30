@@ -3,7 +3,6 @@ export default class to_do_view{
         this.To_do_model = model
     }
     render_list(list,listelement){
-
         for (let i = 0; i < localStorage.length; i++) {
             let storedValue = localStorage.key(i);
             let data = JSON.parse(localStorage.getItem(storedValue))

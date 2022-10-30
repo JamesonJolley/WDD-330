@@ -12,7 +12,7 @@ export default class Controller {
     this.add_button = document.getElementById('todo_add')
     this.input = document.getElementById('input_todo').value
 
-    this.add_button.addEventListener('click',()=>{
+    this.add_button.addEventListener('click',() => {
       this.input = document.getElementById('input_todo').value
       if(this.input == ''){
         alert('please enter a task in the input')

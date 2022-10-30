@@ -83,6 +83,10 @@ function main(){
     {
         label:'todo list',
         url:"todo list/index.html"
+    },
+    {
+        label:'week7',
+        url:'week7/index.html'
     }
 ]
     //makes a content div
