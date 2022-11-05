@@ -87,6 +87,10 @@ function main(){
     {
         label:'week7',
         url:'week7/index.html'
+    },
+    {
+        label:'week8',
+        url:'week8/index.html'
     }
 ]
     //makes a content div
