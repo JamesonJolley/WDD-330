@@ -1,11 +1,4 @@
-const url = 'http://spbooks.github.io/questions.json';
-const quiz =[]
-fetch(url)
-.then(res => res.json())
-.then(quiz => {
-    view.start.addEventListener('click', () => game.start(quiz.questions), false);
-    view.response.addEventListener('click', (event) => game.check(event), false);
-});
+
 
 
 function random(a,b=1) {
@@ -23,14 +16,14 @@ function shuffle(array) {
     }
 }
 
-//const quiz = [
-//    { name: "Superman",realName: "Clark Kent" },
-//    { name: "Wonder Woman",realName: "Diana Prince" },
-//    { name: "Batman",realName: "Bruce Wayne" },
-//    { name: "The Hulk",realName: "Bruce Banner" },
-//    { name: "Spider-man",realName: "Peter Parker" },
-//    { name: "Cyclops",realName: "Scott Summers" }
-//];
+quiz = [
+   { name: "Superman",realName: "Clark Kent" },
+   { name: "Wonder Woman",realName: "Diana Prince" },
+   { name: "Batman",realName: "Bruce Wayne" },
+   { name: "The Hulk",realName: "Bruce Banner" },
+   { name: "Spider-man",realName: "Peter Parker" },
+   { name: "Cyclops",realName: "Scott Summers" }
+];
 const view = {
     score: document.querySelector('#score strong'),
     question: document.getElementById('question'),
@@ -38,6 +31,7 @@ const view = {
     info: document.getElementById('info'),
     start: document.getElementById('start'),
     response: document.querySelector('#response'),
+    timer: document.querySelector('#timer strong'),
     render(target,content,attributes) {
         for(const key in attributes) {
             target.setAttribute(key, attributes[key]);
@@ -70,6 +64,8 @@ buttons(array){
 };
 const game = {
     start(quiz){
+        this.secondsRemaining = 20;
+        this.timer = setInterval( this.countdown , 1000 );
         console.log('start() invoked');
         view.hide(view.start);
         this.questions = [...quiz];
@@ -116,6 +112,14 @@ const game = {
         view.teardown();
         view.show(view.start);
         view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
+    },
+    countdown() {
+        clearInterval(this.timer);
+        game.secondsRemaining--;
+        view.render(view.timer,game.secondsRemaining);
+        if(game.secondsRemaining < 0) {
+            game.gameOver();
+        }
     }
 }
 

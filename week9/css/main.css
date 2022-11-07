@@ -1,0 +1,24 @@
+
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #d16;
+}
+
+#square2{
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+.card{
+    border: 1px solid black;
+    padding: 1%;
+    border-radius: 3%;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+    background-color: lightgrey;
+}

@@ -75,3 +75,19 @@ var imageData = context.getImageData(0, 0, 1, 1);
 var pixelData = imageData.data;
 console.log(pixelData.length);
 
+
+function draw(video, context, canvas) {
+    if (video.paused || video.ended) return false;
+    
+    drawOneFrame(video, context, canvas);
+}
+function makeVideoOldTimey() {
+    var video = document.getElementById("video");
+    var canvas = document.getElementById("canvasOverlay");
+    var context = canvas.getContext("2d");
+
+    video.addEventListener("play", function() { 
+    draw(video,context,canvas);               
+    }, false);  
+
+}
