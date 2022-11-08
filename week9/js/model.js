@@ -18,7 +18,27 @@ var notes = {
     Superman
     </div>
     is an example of data attributes
+    `,
+    'workers':`<button id='rainbow'>Change Color</button>
+    <form>
+        <label for='number'>Enter a Number to Factorize:</label>
+        <input id='number' type='number' name='number' min=1 value='20'>
+        <button type='submit'>Submit</button>
+    </form>
+    <div id='output'></div>
+    `,
+    'mini-messaging':
     `
+    <form>
+        <label for='message'>Enter a Message:</label>
+        <input type='text' name='message'>
+        <button type='submit'>Submit</button>
+    </form>
+    <div id='output'></div>
+    <script src='main.js'></script>
+    
+    `,
+    'all done':"<a href='https://jamesonjolley.github.io/WDD-330/'>go home</a>"
 }
 export default class model{
     constructor() {

@@ -5,7 +5,7 @@ export default class view{
         for (let i in notes){
             console.log(i)
             let view = `
-            <header id ='card_header_${i}' class="card_header">${i}</header>
+            <header id ='card_header_${i}' class="card_header"><h4>${i}</h4></header>
             <body  id ='card_body_${i}' class="card_body">
             ${notes[i]}
             </body>
