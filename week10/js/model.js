@@ -115,6 +115,15 @@ var notes = {
   </p>
   <button>Submit</button>
 </form>
+    `,
+    'Supplying request options':`
+    The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings:
+   it looks like this <strong>fetch(url, {
+    //Different properties can be assigned here.  <a href = 'https://developer.mozilla.org/en-US/docs/Web/API/fetch' target="_blank">Here</a> is a link for all the options</br>
+    //example</br> 
+    'Property':Option,</br>
+   })</strong>
+   
     `
 }
 export default class model{
