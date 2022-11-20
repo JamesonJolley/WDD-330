@@ -91,7 +91,15 @@ function main(){
     {
         label:'week8',
         url:'week8/index.html'
-    }
+    },
+    {
+        label:'week9',
+        url:'week9/index.html'
+    },
+    {
+        label:'week10',
+        url:'week10/index.html'
+    },
 ]
     //makes a content div
     Main = new main_div()
