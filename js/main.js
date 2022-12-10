@@ -100,6 +100,10 @@ function main(){
         label:'week10',
         url:'week10/index.html'
     },
+    {
+        label:'Block 2 Challenge Proposals',
+        url:'Block 2 Challenge Proposals/index.html'
+    },
 ]
     //makes a content div
     Main = new main_div()
