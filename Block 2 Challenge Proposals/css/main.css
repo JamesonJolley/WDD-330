@@ -23,10 +23,11 @@ footer{
     background-color: #3C4048;
     font-family: monospace;
     color:#B2B2B2 ;
-    padding: 0%;
     width: 100%;
+    margin: 1%;
     display: flex;
     justify-content: center;
+    gap: 1%;
     
 }
 
