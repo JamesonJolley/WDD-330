@@ -5,6 +5,9 @@ header{
     background-color: #3C4048;
     font-family:'Sono', sans-serif;
     color:#EAEAEA ;
+    padding: 0%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1{
@@ -20,10 +23,20 @@ footer{
     background-color: #3C4048;
     font-family: monospace;
     color:#B2B2B2 ;
+    padding: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 section{
     background-color: #B2B2B2;
+    display: grid;
+    gap: 1px;
+    justify-items: center;
+   
+
 }
 
 div{
@@ -32,4 +45,25 @@ div{
 
 main{
     background-color: #B2B2B2;
+}
+img{
+    max-width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+#main_saved{
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+}
+.tab{
+    height: 50%;
+    margin: 0%;
+    padding: 0%;
+    max-width: 300px;
+
+    border: 1px solid black;
+
 }
