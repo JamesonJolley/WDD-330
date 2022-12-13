@@ -106,7 +106,7 @@ function main(){
     },
     {
         label:'video showing the work you accomplished',
-        url:'youtube.com/watch?v=LBUx2AEeZYw'
+        url:'https://youtu.be/LBUx2AEeZYw'
         
     }
 ]
