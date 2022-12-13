@@ -104,6 +104,11 @@ function main(){
         label:'Block 2 Challenge Proposals',
         url:'Block 2 Challenge Proposals/index.html'
     },
+    {
+        label:'video showing the work you accomplished',
+        url:'youtube.com/watch?v=LBUx2AEeZYw'
+        
+    }
 ]
     //makes a content div
     Main = new main_div()
@@ -114,7 +119,6 @@ function main(){
     //adds  the nav
     nav_bar = new nav(links)
     nav_bar.add(Main.element)
-    
 }
 
 main()
